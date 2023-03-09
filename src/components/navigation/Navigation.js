@@ -1,9 +1,14 @@
 // CSS import
 import "./Navigation.scss"
 
+import homeButton from "../../img/home_grey.svg"
+
 const Navigation = () => {
-    return ( 
-    <h2>Navigation</h2> 
+    return (
+    <div>
+        <img src={homeButton} alt="Home Button"/>
+        <h2>Navigation</h2>
+    </div>
     );
 }
 
