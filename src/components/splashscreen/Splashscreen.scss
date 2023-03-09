@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "montserratBold";
+    src: url("../../fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+.splashscreen{
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom: 0;
+
+    background-color: red;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: white;
+
+        /* font-family: "montserratBold"; */
+
+        /* font-weight: bold; */
+        
+    }
+}

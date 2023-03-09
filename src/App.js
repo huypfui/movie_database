@@ -23,7 +23,6 @@ function App() {
 
       </Routes>
       </BrowserRouter>
-      <h1>Initial upload</h1>
     </div>
   );
 }
