@@ -7,6 +7,8 @@ import { v4 as uuidv4 } from 'uuid';
 import Filter from "../components/filter/Filter";
 import MovieItem from "../components/movieItem/MovieItem";
 
+// Style import
+import "./GenreSearch.scss"
 
 
 const GenreSearch = () => {
