@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import "./MovieInfo.scss";
 
 //component import
-import { genreData } from "../filter/Filter";
 
 // image import
 import play from "../../img/play.svg";
