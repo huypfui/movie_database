@@ -7,7 +7,7 @@ import {Link} from "react-router-dom"
 import { useEffect,useState } from "react"
 import { v4 as uuidv4 } from 'uuid';
 
-const Filter = () => {
+const Filter = (props) => {
     const [genres,setGenres]= useState();
     const[genreId,setGenreId] = useState();
     const [searchTerm,setSearchTerm] = useState("");
@@ -19,16 +19,17 @@ const Filter = () => {
     },[])
 
 
-    
     // Get Movie list filtered after genre
     const searchGenre = (event) => {
-        setGenreId(event.target.value); 
+        setGenreId(event.target.value)
         fetch(`https://api.themoviedb.org/3/discover/movie?api_key=2f42e4a86b0ac5a0f11b8f51ca045ce0&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${genreId}&with_watch_monetization_types=flatrate`)
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => props.filteredData(data))
+        // .then(data => console.log(data))
         
     }
     
+    console.log(genreId);
     const getSearchterm = (event) =>  (setSearchTerm(event.target.value))
 
     return ( 
@@ -45,10 +46,10 @@ const Filter = () => {
         <article>
                     {genres?.map((genre)=> 
                     
-                    <Link to="/search" state={genreId} value={genre.id} key={uuidv4()} onClick={searchGenre}> 
+                    <button value={genre.id} key={uuidv4()} onClick={searchGenre}> 
                     {genre.name}
                     
-                    </Link> )}
+                    </button> )}
         </article>
 
     </section>

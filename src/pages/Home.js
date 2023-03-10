@@ -15,7 +15,7 @@ const Home = () => {
     const [trending,setTrending] = useState([]);
 
     const apiKey = "2f42e4a86b0ac5a0f11b8f51ca045ce0"
-  
+
     // Get Trending Movies Data and save in trending state
             useEffect(()=>{
             fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=${apiKey}`)

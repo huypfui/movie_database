@@ -11,9 +11,16 @@ import MovieItem from "../components/movieItem/MovieItem";
 
 const GenreSearch = () => {
     const [searchResults,setSearchResults] = useState(null);
+    const [genreResult,setGenreResult]= useState();
     const searchValue = useLocation();
     
+    function handleData(data){
+       setGenreResult(data.results)
+
+    }
     const apiKey = "2f42e4a86b0ac5a0f11b8f51ca045ce0"
+
+    console.log("genre",genreResult);
 
     // Get Movie list (searchresult) according to searchValue
     useEffect(()=>{
@@ -26,11 +33,16 @@ const GenreSearch = () => {
 
     return (
         <>
-        <Filter/>
+        <Filter filteredData={handleData}/>
 
         <article>
             {/* Iterate through search results to display */}
-            { searchResults?.map((movie) =>  <MovieItem {...movie} key={uuidv4()}/>)}
+
+            {!genreResult ?
+                 searchResults?.map((movie) =>  <MovieItem {...movie} key={uuidv4()}/>)
+                  : 
+                 genreResult?.map((movie) =>  <MovieItem {...movie} key={uuidv4()}/>)
+            }
         </article>
 
         </>
