@@ -43,10 +43,10 @@ const GenreSearch = () => {
 				{!genreResult
 					? searchResults?.map((movie) => (
 							<MovieItem {...movie} key={uuidv4()} />
-					  ))
+					))
 					: genreResult?.map((movie) => (
 							<MovieItem {...movie} key={uuidv4()} />
-					  ))}
+					))}
 			</article>
 			<Navigation />
 		</>

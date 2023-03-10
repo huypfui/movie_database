@@ -36,7 +36,7 @@ const MovieItem = (props) => {
 				<img src={star} alt="star" className="icon" />
 				<p>
 					• {+props.vote_average.toFixed(1)} • {props.release_date.slice(0, 4)}{" "}
-					•{getGenre(props.genre_ids[0])?.name}
+					{/* •{getGenre(props.genre_ids[0])?.name} */}
 				</p>
 			</div>
 		</Link>
