@@ -15,7 +15,6 @@ const MovieItem = (props) => {
     </article>
 
 
-
     );
 }
 
