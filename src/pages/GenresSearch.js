@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Filter from "../components/filter/Filter";
 import MovieItem from "../components/movieItem/MovieItem";
 
+
 // Style import
 import "./GenreSearch.scss"
 
@@ -17,9 +18,9 @@ const GenreSearch = () => {
     const searchValue = useLocation();
     
     function handleData(data){
-       setGenreResult(data.results)
-
+        setGenreResult(data.results)
     }
+
     const apiKey = "2f42e4a86b0ac5a0f11b8f51ca045ce0"
 
     console.log("genre",genreResult);
@@ -41,9 +42,9 @@ const GenreSearch = () => {
             {/* Iterate through search results to display */}
 
             {!genreResult ?
-                 searchResults?.map((movie) =>  <MovieItem {...movie} key={uuidv4()}/>)
-                  : 
-                 genreResult?.map((movie) =>  <MovieItem {...movie} key={uuidv4()}/>)
+                searchResults?.map((movie) =>  <MovieItem {...movie} key={uuidv4()}/>)
+                :
+                genreResult?.map((movie) =>  <MovieItem {...movie} key={uuidv4()}/>)
             }
         </article>
 

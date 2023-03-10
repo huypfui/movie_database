@@ -14,9 +14,9 @@ import { Link } from "react-router-dom";
 
 const MovieItem = (props) => {
 	// get the genre from list
-	function getGenre(id) {
+/* 	function getGenre(id) {
 		return genreData.find((genre) => genre.id == id);
-	}
+	} */
 
 	// fallback if image doesn't exist
 	let img =
@@ -36,7 +36,7 @@ const MovieItem = (props) => {
 				<img src={star} alt="star" className="icon" />
 				<p>
 					• {props.vote_average} • {props.release_date.slice(0, 4)} •
-					{getGenre(props.genre_ids[0])?.name}
+					{/* {getGenre(props.genre_ids[0])?.name} */}
 				</p>
 			</div>
 		</Link>

@@ -10,7 +10,6 @@ import { Link } from "react-router-dom"
 import { v4 as uuidv4 } from 'uuid';
 
 
-
 const Home = () => {
     const [trending,setTrending] = useState([]);
 
@@ -18,11 +17,12 @@ const Home = () => {
 
     // Get Trending Movies Data and save in trending state
             useEffect(()=>{
-            fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=${apiKey}`)
-                .then(response=>response.json())
-                .then(data=> setTrending(data.results))
+                fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=${apiKey}`)
+                    .then(response=>response.json())
+                    .then(data=> setTrending(data.results))
         },[])
 
+console.log(trending)
 
 return (
 
@@ -32,14 +32,15 @@ return (
         <Filter  />
 
         <h3> Trending Movies</h3>
-        <Link> See all </Link>
+        <Link to="/trending" state={trending}> See all </Link>
          {/* Iterate through Trending Movies Data to display movie details */}
+        <Link to="/trending">
         <section className="carusell">
             {trending.map((movie)=> 
                 <Trending {...movie} key={uuidv4()}/>
             ) }
-
         </section>
+        </Link>
         <Navigation/>
 
 
