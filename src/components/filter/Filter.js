@@ -35,7 +35,7 @@ const Filter = (props) => {
 		// .then(data => console.log(data))
 	};
 
-	console.log(genreId);
+	// console.log(genreId);
 	const getSearchterm = (event) => setSearchTerm(event.target.value);
 
 	return (

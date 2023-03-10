@@ -7,14 +7,14 @@ import star from "../../img/star.svg";
 import notFound from "../../img/notfound.jpeg";
 
 // Data import
-import { genreData } from "../filter/Filter";
+// import { genreData } from "../filter/Filter";
 
 // Library import
 import { Link } from "react-router-dom";
 
 const MovieItem = (props) => {
 	// get the genre from list
-/* 	function getGenre(id) {
+	/* 	function getGenre(id) {
 		return genreData.find((genre) => genre.id == id);
 	} */
 
