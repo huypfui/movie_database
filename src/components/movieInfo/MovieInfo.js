@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 // style import
 import "./MovieInfo.scss";
 
-//component import
-
 // image import
 import play from "../../img/play.svg";
 import star from "../../img/star.svg";
