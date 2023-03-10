@@ -1,5 +1,5 @@
 // library import
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 // component import
@@ -32,7 +32,6 @@ const MovieDetail = () => {
 				}
 			}>
 			<BackButton />
-
 			<MovieInfo movieDetails={movieDetails} />
 
 			<div className="nav">
