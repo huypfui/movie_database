@@ -39,7 +39,7 @@ const Filter = (props) => {
 	const getSearchterm = (event) => setSearchTerm(event.target.value);
 
 	return (
-		<section>
+		<section className="filter">
 			<article>
 				<input
 					type="search"
