@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 // style import
 import "./MovieInfo.scss";
 
-//component import
-import { genreData } from "../filter/Filter";
-
 // image import
 import play from "../../img/play.svg";
 import star from "../../img/star.svg";
