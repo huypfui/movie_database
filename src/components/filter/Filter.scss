@@ -1,0 +1,38 @@
+.filter {
+	padding: 1rem;
+	background-color: white;
+	article {
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		input,
+		button,
+		.button {
+			background-color: var(--bgColor);
+			border: none;
+			border-radius: 10px;
+			padding: 1rem;
+			width: 100%;
+			font-family: inherit;
+		}
+		a {
+			position: absolute;
+			right: 1rem;
+		}
+	}
+
+	article:last-of-type {
+		margin: 1rem 0 0;
+		overflow: scroll;
+		gap: 1rem;
+		.button,
+		button {
+			white-space: nowrap;
+			font-size: 1rem;
+		}
+		.button {
+			position: static;
+		}
+	}
+}
