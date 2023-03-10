@@ -1,5 +1,5 @@
 // library import
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 // component import
@@ -19,7 +19,6 @@ const MovieDetail = () => {
 			.then((response) => response.json())
 			.then((data) => setMovieDetails(data));
 	}, [movieID]);
-
 	console.log(movieDetails);
 	// console.log(movieDetails.genres);
 	// console.log(movieDetails.spoken_languages);
