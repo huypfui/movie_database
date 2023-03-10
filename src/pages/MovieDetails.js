@@ -1,6 +1,7 @@
 // library import
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+
 // component import
 import MovieInfo from "../components/movieInfo/MovieInfo";
 import Navigation from "../components/navigation/Navigation";

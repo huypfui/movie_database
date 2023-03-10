@@ -16,7 +16,7 @@ const MovieItem = (props) => {
 	// get the genre from list
 /* 	function getGenre(id) {
 		return genreData.find((genre) => genre.id == id);
-	} */
+	}  */
 
 	// fallback if image doesn't exist
 	let img =
