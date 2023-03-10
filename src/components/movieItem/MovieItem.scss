@@ -1,24 +1,33 @@
-.movieItem{
-        display: flex;
-        flex-direction: row;
-        border: 1px solid black;
-        padding: 1rem;
-        gap: 1rem;
-       .poster{
-            border-radius: 10px;
-            width: 40%;
-        }
-       .info{
-            h3{
-                font-size: 1.1rem;
-            }
-            icon{
-                border: 1px solid black;
-                display: block;
-            }
+.movieItem {
+	display: grid;
+	grid-template-areas: "img title" "img info";
+	grid-template-columns: 0.7fr 3fr;
+	padding: 1rem;
+	gap: 1rem;
+	width: 100%;
 
-            
-       }
-    
+	.poster {
+		border-radius: 10px;
+		width: 100%;
+		grid-area: img;
+	}
+	.movieTitle {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
+		h3 {
+			font-size: 1.1rem;
+			font-weight: bold;
+			width: 80%;
+		}
+	}
+	.info {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+	}
+	.icon {
+		width: 20px;
+	}
 }
