@@ -22,6 +22,7 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
+	z-index: 50;
 	background-image: linear-gradient(
 		180deg,
 		#ffffff00 0%,
@@ -49,4 +50,10 @@
 		width: fit-content;
 		margin: 1rem auto;
 	}
+}
+
+.backBtn {
+	position: absolute;
+	z-index: 100;
+	margin: 1rem;
 }
