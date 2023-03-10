@@ -10,7 +10,7 @@ import BackButton from "../components/backbutton/BackButton";
 const MovieDetail = () => {
 	const params = useParams();
 	let movieID = params.name;
-	const [movieDetails, setMovieDetails] = useState(null);
+	const [movieDetails, setMovieDetails] = useState();
 
 	useEffect(() => {
 		fetch(
@@ -18,7 +18,8 @@ const MovieDetail = () => {
 		)
 			.then((response) => response.json())
 			.then((data) => setMovieDetails(data));
-	}, []);
+	}, [movieID]);
+
 	console.log(movieDetails);
 	// console.log(movieDetails.genres);
 	// console.log(movieDetails.spoken_languages);
@@ -32,7 +33,12 @@ const MovieDetail = () => {
 				}
 			}>
 			<BackButton />
-			<MovieInfo movieDetails={movieDetails} />
+			
+			{
+				movieDetails &&
+				<MovieInfo movieDetails={movieDetails}/>
+			}
+			
 
 			<div className="nav">
 				<Navigation />

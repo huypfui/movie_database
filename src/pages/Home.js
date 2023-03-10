@@ -34,13 +34,11 @@ return (
         <h3> Trending Movies</h3>
         <Link to="/trending" state={trending}> See all </Link>
          {/* Iterate through Trending Movies Data to display movie details */}
-        <Link to="/trending">
         <section className="carusell">
             {trending.map((movie)=> 
                 <Trending {...movie} key={uuidv4()}/>
             ) }
         </section>
-        </Link>
         <Navigation/>
 
 

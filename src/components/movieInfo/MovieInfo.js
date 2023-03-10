@@ -1,11 +1,17 @@
+// library import
+import { Link } from "react-router-dom";
+
 // style import
 import "./MovieInfo.scss";
 
+//component import
 import { genreData } from "../filter/Filter";
 
 // image import
 import play from "../../img/play.svg";
 import star from "../../img/star.svg";
+import { useEffect, useState } from "react";
+
 const MovieInfo = ({ movieDetails }) => {
 	console.log(movieDetails);
 
@@ -13,9 +19,19 @@ const MovieInfo = ({ movieDetails }) => {
 		return genreData.find((genre) => genre.id == id);
 	}
 
+	const [key,setKey] = useState()
+
+	useEffect (()=>{
+        fetch(`https://api.themoviedb.org/3/movie/${movieDetails.id}/videos?api_key=2f42e4a86b0ac5a0f11b8f51ca045ce0`)
+        .then(response => response.json())
+        .then(data => setKey(data.results[0].key))
+        },[movieDetails.id])
+
+	console.log(movieDetails)
+
 	return (
 		<>
-			{movieDetails && (
+			{/* {movieDetails && ( */}
 				<section className="movieInfo">
 					<p>Movie Details</p>
 					<h2>{movieDetails?.title}</h2>
@@ -34,14 +50,21 @@ const MovieInfo = ({ movieDetails }) => {
 						<h5>{/* Genres <p>{movieDetails?.genres}</p> */}</h5>
 						{/* <h5>Languages{movieDetails?.spoken_languages}</h5> */}
 					</article>
+
+					<Link to={`https://www.youtube.com/embed/${key}?rel=0&amp;autoplay=1;autohide=0;fs=0;hd=0=mute=1`}>
 					<button>
 						<img src={play} alt="youtube play icon" />
 						Watch Trailer
 					</button>
+					</Link>
+
 				</section>
-			)}
+			{/* )} */}
 		</>
 	);
 };
 
 export default MovieInfo;
+
+// Link auf den wir verlinken müssen https://www.youtube.com/watch?v={Key}
+// den Key bekommen wir über die ID und diesen API Link https://api.themoviedb.org/3/movie/{Movie ID}/videos?api_key=2f42e4a86b0ac5a0f11b8f51ca045ce0
