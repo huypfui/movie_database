@@ -1,6 +1,11 @@
+import BackButton from "../components/backbutton/BackButton";
+
 const MovieDetails = () => {
     return ( 
-    <h3>MovieDetails</h3> 
+    <div>
+        <BackButton/>
+        <h3>MovieDetails</h3> 
+    </div>
     );
 }
 
