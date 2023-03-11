@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 const MovieInfo = ({ movieDetails }) => {
 	console.log(movieDetails);
 
-	let genre = movieDetails.genres.map((genre) => genre.name).join(" ");
+	let genre = movieDetails.genres.map((genre) => genre.name).join(", ");
 	console.log(genre);
 
 	const [key, setKey] = useState();
@@ -25,7 +25,14 @@ const MovieInfo = ({ movieDetails }) => {
 			.then((data) => setKey(data.results[0].key));
 	}, [movieDetails.id]);
 
-	console.log(movieDetails);
+	// function to turn runtime in minutes into hour and minutes
+	const toHoursAndMinutes = (total) => {
+		let hours = Math.floor(total / 60);
+		let min = total % 60;
+		return `${hours}h${min > 0 ? ` ${min}m` : ""}`;
+	};
+
+	console.log(toHoursAndMinutes(129));
 
 	return (
 		<>
@@ -38,7 +45,8 @@ const MovieInfo = ({ movieDetails }) => {
 					<p>
 						• {movieDetails?.vote_average.toFixed(1)} •
 						{movieDetails.release_date.slice(0, 4)} •
-						{movieDetails.genres[0].name}
+						{movieDetails.genres[0].name}•{" "}
+						{toHoursAndMinutes(movieDetails.runtime)}
 					</p>
 				</div>
 				<article>
