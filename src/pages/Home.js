@@ -28,11 +28,12 @@ const Home = () => {
 
 			<Filter />
 
-			<h3> Trending Movies</h3>
-			<Link to="/trending" state={trending}>
-				{" "}
-				See all{" "}
-			</Link>
+			<div className="trendingTitle">
+				<h3> Trending Movies</h3>
+				<Link to="/trending" state={trending}>
+					See all
+				</Link>
+			</div>
 			{/* Iterate through Trending Movies Data to display movie details */}
 
 			<section className="carusell">
@@ -40,7 +41,8 @@ const Home = () => {
 					<Trending {...movie} key={uuidv4()} />
 				))}
 			</section>
-			<Navigation />
+
+			<Navigation home />
 		</div>
 	);
 };

@@ -7,16 +7,17 @@ import star from "../../img/star.svg";
 import notFound from "../../img/notfound.jpeg";
 
 // Data import
-// import { genreData } from "../filter/Filter";
+import { genreData } from "../filter/Filter";
 
 // Library import
 import { Link } from "react-router-dom";
 
 const MovieItem = (props) => {
+	console.log(genreData);
 	// get the genre from list
-	/* 	function getGenre(id) {
-		return genreData.find((genre) => genre.id == id);
-	}  */
+
+	let genre = genreData?.find((genre) => genre.id === props.genre_ids[0])?.name;
+	console.log(genre);
 
 	// fallback if image doesn't exist
 	let img =
@@ -35,8 +36,8 @@ const MovieItem = (props) => {
 			<div className="info">
 				<img src={star} alt="star" className="icon" />
 				<p>
-					• {+props.vote_average.toFixed(1)} • {props.release_date.slice(0, 4)}{" "}
-					{/* •{getGenre(props.genre_ids[0])?.name} */}
+					• {+props?.vote_average.toFixed(1)} •{" "}
+					{props?.release_date.slice(0, 4)} •{genre}
 				</p>
 			</div>
 		</Link>

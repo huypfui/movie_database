@@ -24,25 +24,23 @@ const MovieDetail = () => {
 	// console.log(movieDetails.spoken_languages);
 
 	return (
-		<div
-			className="movieDetail"
-			style={
-				movieDetails && {
-					backgroundImage: `url(http://image.tmdb.org/t/p/w500/${movieDetails.poster_path})`,
-				}
-			}>
-			<BackButton />
-			
-			{
-				movieDetails &&
-				<MovieInfo movieDetails={movieDetails}/>
-			}
-			
+		movieDetails && (
+			<div
+				className="movieDetail"
+				style={
+					movieDetails && {
+						backgroundImage: `url(http://image.tmdb.org/t/p/w500/${movieDetails.poster_path})`,
+					}
+				}>
+				<BackButton />
 
-			<div className="nav">
-				<Navigation />
+				{movieDetails && <MovieInfo movieDetails={movieDetails} />}
+
+				<div className="nav">
+					<Navigation />
+				</div>
 			</div>
-		</div>
+		)
 	);
 };
 
