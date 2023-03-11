@@ -6,9 +6,7 @@
 		display: flex;
 		align-items: center;
 		width: 100%;
-		input,
-		button,
-		.button {
+		input {
 			background-color: var(--bgColor);
 			border: none;
 			border-radius: 10px;
@@ -25,14 +23,26 @@
 	article:last-of-type {
 		margin: 1rem 0 0;
 		overflow: scroll;
+		scroll-snap-type: x mandatory;
 		gap: 1rem;
-		.button,
-		button {
+		.button {
 			white-space: nowrap;
 			font-size: 1rem;
-		}
-		.button {
+			scroll-snap-align: start;
 			position: static;
+			border: none;
+			border-radius: 10px;
+			padding: 1rem;
+			width: 100%;
+			font-family: inherit;
 		}
 	}
+}
+
+.active {
+	color: white;
+	background-color: var(--primary, red);
+}
+.inactive {
+	background-color: var(--bgColor);
 }

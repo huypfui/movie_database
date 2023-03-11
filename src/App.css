@@ -4,10 +4,6 @@
 	box-sizing: border-box;
 }
 
-body {
-	/* width: 500px; */
-}
-
 a {
 	text-decoration: none;
 	color: #000;
@@ -16,4 +12,19 @@ a {
 :root {
 	--bgColor: #fbf8ff;
 	--primary: #fc2121;
+}
+
+.Home .trendingTitle {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+}
+
+.Home .trendingTitle a {
+	color: var(--primary);
+}
+
+h2 {
+	padding: 1rem 0 0 1rem;
 }
