@@ -20,6 +20,8 @@ function App() {
 					<Route path="/" element={<IntroApp />} />
 					<Route path="/home" element={<Home />} />
 					<Route path="/search" element={<GenresSearch />} />
+					<Route path="/search/:search" element={<GenresSearch />} />
+					<Route path="/genre/:genre" element={<GenresSearch />} />
 					<Route path="/trending" element={<TrendingSearch />} />
 					<Route path="/moviedetails/:name" element={<MovieDetails />} />
 				</Routes>
