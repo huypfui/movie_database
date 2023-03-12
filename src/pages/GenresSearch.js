@@ -8,9 +8,6 @@ import Filter from "../components/filter/Filter";
 import MovieItem from "../components/movieItem/MovieItem";
 import Navigation from "../components/navigation/Navigation";
 
-// Style import
-import "./GenreSearch.scss";
-
 const GenreSearch = () => {
 	const [searchResults, setSearchResults] = useState();
 	const [genreResult, setGenreResult] = useState();
@@ -43,6 +40,7 @@ const GenreSearch = () => {
 	return (
 		<>
 			<Filter genreID={params?.genre} />
+
 			{/* <Filter filteredData={handleData} /> */}
 
 			<article className="movieList">
@@ -57,7 +55,10 @@ const GenreSearch = () => {
 							<MovieItem {...movie} key={uuidv4()} />
 					))}
 			</article>
-			<Navigation />
+			<div className="nav">
+				<Navigation />
+			</div>
+			
 		</>
 	);
 };

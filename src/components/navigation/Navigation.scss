@@ -1,5 +1,19 @@
-.navBar {
+.nav {
+	grid-area: nav;
+	position: absolute;
+	z-index: 100;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	.navBar {
+		display: flex;
+		justify-content: space-around;
+		margin-block: 1rem;
+	}
+}
+
+/* .navBar {
 	display: flex;
 	justify-content: space-around;
 	margin-block: 1rem;
-}
+} */

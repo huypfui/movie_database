@@ -7,8 +7,7 @@ import Filter from "../components/filter/Filter";
 import MovieItem from "../components/movieItem/MovieItem";
 import Navigation from "../components/navigation/Navigation";
 
-// Style import
-import "./GenreSearch.scss";
+
 const TrendingSearch = () => {
 	const trendingValue = useLocation();
 
@@ -25,7 +24,9 @@ const TrendingSearch = () => {
                     ))}
             
 		    </article>
-        <Navigation />
+        <div className="nav">
+			<Navigation />
+		</div>
         </>
 	);
 };

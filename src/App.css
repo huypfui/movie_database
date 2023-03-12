@@ -1,3 +1,8 @@
+@font-face {
+	font-family: "Montserrat";
+	src: local("Montserrat") url("./fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+}
+
 * {
 	margin: 0;
 	padding: 0;

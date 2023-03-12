@@ -41,8 +41,7 @@ const Home = () => {
 					<Trending {...movie} key={uuidv4()} />
 				))}
 			</section>
-
-			<Navigation home />
+			<Navigation home/>
 		</div>
 	);
 };

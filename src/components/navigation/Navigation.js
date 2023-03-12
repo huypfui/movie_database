@@ -14,6 +14,7 @@ import profile from "../../img/profile.svg";
 
 const Navigation = ({ home }) => {
 	return (
+		<section className="nav">
 		<div className="navBar">
 			{home ? (
 				<Link to="/Home">
@@ -28,6 +29,8 @@ const Navigation = ({ home }) => {
 			<img src={mailbox} alt="Mailbox" />
 			<img src={profile} alt="Profile" />
 		</div>
+		</section>
+
 	);
 };
 
