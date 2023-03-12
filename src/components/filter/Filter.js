@@ -45,7 +45,7 @@ const Filter = ({ genreID }) => {
 				{genres?.map((genre) => (
 					<Link
 						className={
-							genreID === genre.id ? "button active" : "button inactive"
+							+genreID === +genre.id ? "button active" : "button inactive"
 						}
 						to={`/genre/${genre.id}`}
 						value={genre.id}
