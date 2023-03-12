@@ -14,8 +14,7 @@ code {
 
 @font-face {
 	font-family: "Montserrat";
-	src: local("Montserrat"), url("./fonts/Montserrat/Montserrat-Bold.ttf"),
-		format("truetype");
+	src: local("Montserrat") url("./fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
 }
 
 @font-face {

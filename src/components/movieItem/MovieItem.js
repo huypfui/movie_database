@@ -25,6 +25,12 @@ const MovieItem = (props) => {
 			? `http://image.tmdb.org/t/p/w500/${props.poster_path}`
 			: notFound;
 
+		const toHoursAndMinutes = (total) => {
+			let hours = Math.floor(total / 60);
+			let min = total % 60;
+			return `${hours}h${min > 0 ? ` ${min}m` : ""}`;
+		};
+
 	return (
 		<Link to={`/moviedetails/${props.id}`} className="movieItem">
 			<img src={img} alt="poster" className="poster" />
@@ -36,8 +42,9 @@ const MovieItem = (props) => {
 			<div className="info">
 				<img src={star} alt="star" className="icon" />
 				<p>
-					• {+props?.vote_average.toFixed(1)} •{" "}
-					{props?.release_date.slice(0, 4)} •{genre}
+					{+props?.vote_average.toFixed(1)} • {" "}
+					{props?.release_date.slice(0, 4)} • {genre} • {" "}
+					{toHoursAndMinutes(props?.runtime)}
 				</p>
 			</div>
 		</Link>

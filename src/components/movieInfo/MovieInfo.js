@@ -43,16 +43,16 @@ const MovieInfo = ({ movieDetails }) => {
 				<div className="info">
 					<img src={star} alt="star" className="icon" />
 					<p>
-						• {movieDetails?.vote_average.toFixed(1)} •
-						{movieDetails.release_date.slice(0, 4)} •
-						{movieDetails.genres[0].name}•{" "}
+					{movieDetails?.vote_average.toFixed(1)} • {" "}
+						{movieDetails.release_date.slice(0, 4)} • {" "}
+						{movieDetails.genres[0].name} • {" "}
 						{toHoursAndMinutes(movieDetails.runtime)}
 					</p>
 				</div>
 				<article>
 					<h3>Overview</h3>
 					<p>
-						{movieDetails.overview.slice(0, 200)} <span> See more...</span>
+						{movieDetails.overview.slice(0, 200)} <span className="seeMore"> See more...</span>
 					</p>
 
 					<div className="genre">
