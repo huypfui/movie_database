@@ -5,20 +5,28 @@ import { v4 as uuidv4 } from "uuid";
 // Component Import
 import Filter from "../components/filter/Filter";
 import MovieItem from "../components/movieItem/MovieItem";
+import Navigation from "../components/navigation/Navigation";
 
+// Style import
+import "./GenreSearch.scss";
 const TrendingSearch = () => {
 	const trendingValue = useLocation();
 
 	console.log(trendingValue.state);
 
 	return (
-		<article>
-			<Filter />
-			{trendingValue &&
-				trendingValue?.state.map((movie) => (
-					<MovieItem {...movie} key={uuidv4()} />
-				))}
-		</article>
+        <>
+        <Filter />
+		    <article className="movieList">
+			
+                {trendingValue &&
+                    trendingValue?.state.map((movie) => (
+                        <MovieItem {...movie} key={uuidv4()} />
+                    ))}
+            
+		    </article>
+        <Navigation />
+        </>
 	);
 };
 
