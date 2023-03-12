@@ -15,20 +15,20 @@ import profile from "../../img/profile.svg";
 const Navigation = ({ home }) => {
 	return (
 		<section className="nav">
-		<div className="navBar">
-			{home ? (
-				<Link to="/Home">
-					<img src={homeRed} alt="Home Button" />
-				</Link>
-			) : (
-				<Link to="/Home">
-					<img src={homeGrey} alt="Home Button" />
-				</Link>
-			)}
-			<img src={bookmark} alt="Bookmark" />
-			<img src={mailbox} alt="Mailbox" />
-			<img src={profile} alt="Profile" />
-		</div>
+			<div className="navBar">
+				{home ? (
+					<Link to="/Home">
+						<img src={homeRed} alt="Home Button" />
+					</Link>
+				) : (
+					<Link to="/Home">
+						<img src={homeGrey} alt="Home Button" />
+					</Link>
+				)}
+				<img src={bookmark} alt="Bookmark" />
+				<img src={mailbox} alt="Mailbox" />
+				<img src={profile} alt="Profile" />
+			</div>
 		</section>
 
 	);

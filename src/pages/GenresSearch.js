@@ -55,10 +55,10 @@ const GenreSearch = () => {
 							<MovieItem {...movie} key={uuidv4()} />
 					))}
 			</article>
+
 			<div className="nav">
-				<Navigation />
+					<Navigation />
 			</div>
-			
 		</>
 	);
 };
