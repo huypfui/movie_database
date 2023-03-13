@@ -1,5 +1,5 @@
 // CSS import
-import "./App.css";
+import "./App.scss";
 
 // Library import
 // import { useState, useEffect } from "react"
