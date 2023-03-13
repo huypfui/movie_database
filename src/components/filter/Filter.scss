@@ -20,10 +20,12 @@
 		}
 	}
 
-	article:last-of-type {
-		margin: 1rem 0 0;
+	.genreButtons {
+		margin: 1rem 0rem 0rem 0rem;
+		padding-bottom: 1rem;
 		overflow: scroll;
 		scroll-snap-type: x mandatory;
+		overscroll-behavior-inline: contain;
 		gap: 1rem;
 		.button {
 			white-space: nowrap;
@@ -45,4 +47,20 @@
 }
 .inactive {
 	background-color: var(--bgColor);
+}
+
+.genreButtons::-webkit-scrollbar {
+	width:0em;
+	height: .5em;
+}
+.genreButtons::-webkit-scrollbar-thumb{
+	background: #fc2121;
+	width: 50pxpx;
+	border-radius:50vw;
+}
+
+.genreButtons::-webkit-scrollbar-track{
+	background:whitesmoke;
+	margin-block:.5em;
+	border-radius:100vw;
 }

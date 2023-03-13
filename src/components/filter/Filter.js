@@ -29,7 +29,7 @@ const Filter = ({ genreID }) => {
 
 	return (
 		<section className="filter">
-			<article>
+			<article className="searchbar">
 				<input
 					type="search"
 					name="search"
@@ -41,7 +41,7 @@ const Filter = ({ genreID }) => {
 				</Link>
 			</article>
 
-			<article>
+			<article className="genreButtons">
 				{genres?.map((genre) => (
 					<Link
 						className={

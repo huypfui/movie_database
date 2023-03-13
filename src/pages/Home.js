@@ -26,8 +26,9 @@ const Home = () => {
 		<div className="Home">
 			<h2 className="welcome">Welcome</h2>
 
-			<Filter />
+		<Filter />
 
+		<section className="trendSection">
 			<div className="trendingTitle">
 				<h3> Trending Movies</h3>
 				<Link to="/trending" state={trending}>
@@ -41,10 +42,12 @@ const Home = () => {
 					<Trending {...movie} key={uuidv4()} />
 				))}
 			</section>
+				
+				<div className="nav">
+						<Navigation home/>
+				</div>
+			</section>
 			
-			<div className="nav">
-					<Navigation home/>
-			</div>
 		</div>
 	);
 };
