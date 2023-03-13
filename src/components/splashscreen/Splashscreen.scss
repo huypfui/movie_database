@@ -1,3 +1,8 @@
+@font-face {
+	font-family: "Montserrat-VariableFont";
+	src: url("../../fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
 .splashscreen{
     position: absolute;
     top:0;
@@ -13,5 +18,6 @@
 
     h1 {
         color: white;
+        font-family: "Montserrat-VariableFont";
     }
 }
