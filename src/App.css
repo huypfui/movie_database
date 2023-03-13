@@ -30,7 +30,7 @@ a {
 	color: var(--primary);
 }
 
-h2 {
+.welcome {
 	padding: 1rem 0 0 1rem;
 }
 

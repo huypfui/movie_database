@@ -18,9 +18,11 @@ const IntroApp = () => {
     return ( 
     <div className="introApp">
         <img src={placeholder} alt="Beispielbild" />
-        <h2>Enjoy Your Movie<br/>Watch Everywhere</h2>
-        <p>Stream unlimited movies and TV shows<br/>on your phone,tablet, laptop, and TV.</p><br/>
-        <Link className="link" to="/Home">Get Started</Link>
+        <div className="intro">
+            <h2>Enjoy Your Movie<br/>Watch Everywhere</h2>
+            <p>Stream unlimited movies and TV shows<br/>on your phone,tablet, laptop, and TV.</p><br/>
+            <Link className="link" to="/Home">Get Started</Link>
+        </div>
 
         { show ? <SplashScreen handleClick={handleClick}/>  : "" }
 

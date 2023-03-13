@@ -24,7 +24,7 @@ const Home = () => {
 
 	return (
 		<div className="Home">
-			<h2>Welcome</h2>
+			<h2 className="welcome">Welcome</h2>
 
 			<Filter />
 
