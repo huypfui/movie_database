@@ -10,10 +10,10 @@ import star from "../../img/star.svg";
 import { useEffect, useState } from "react";
 
 const MovieInfo = ({ movieDetails }) => {
-	console.log(movieDetails);
+	// console.log(movieDetails);
 
 	let genre = movieDetails.genres.map((genre) => genre.name).join(", ");
-	console.log(genre);
+	// console.log(genre);
 
 	const [key, setKey] = useState();
 
@@ -32,8 +32,6 @@ const MovieInfo = ({ movieDetails }) => {
 		return `${hours}h${min > 0 ? ` ${min}m` : ""}`;
 	};
 
-	console.log(toHoursAndMinutes(129));
-
 	return (
 		<>
 			{/* {movieDetails && ( */}
@@ -43,23 +41,23 @@ const MovieInfo = ({ movieDetails }) => {
 				<div className="info">
 					<img src={star} alt="star" className="icon" />
 					<p>
-					{movieDetails?.vote_average.toFixed(1)} • {" "}
-						{movieDetails.release_date.slice(0, 4)} • {" "}
-						{movieDetails.genres[0].name} • {" "}
+						<span>{movieDetails?.vote_average.toFixed(1)} </span>•{" "}
+						{movieDetails.release_date.slice(0, 4)} •{" "}
+						{movieDetails.genres[0].name} •{" "}
 						{toHoursAndMinutes(movieDetails.runtime)}
 					</p>
 				</div>
 				<article>
 					<h3>Overview</h3>
 					<p>
-						{movieDetails.overview.slice(0, 200)} <span className="seeMore"> See more...</span>
+						{movieDetails.overview.slice(0, 200)}{" "}
+						<span className="seeMore"> See more...</span>
 					</p>
 
 					<div className="genre">
 						<h5>Genres</h5>
 						<p>{genre}</p>
 					</div>
-					{/* <h5>Languages{movieDetails?.spoken_languages}</h5> */}
 				</article>
 
 				<Link

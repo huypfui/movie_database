@@ -4,10 +4,14 @@
 	font-family: "Poppins-Regular";
 	src: url("./fonts/Poppins/Poppins-Regular.ttf");
 }
+@font-face {
+	font-family: "Poppins-Bold";
+	src: url("./fonts/Poppins/Poppins-SemiBold.ttf");
+}
 
 body {
-    font-family: "Poppins-Regular";
-    button {
-        font-family: "Poppins-Regular";
-    }
+	font-family: "Poppins-Regular";
+	button {
+		font-family: "Poppins-Regular";
+	}
 }

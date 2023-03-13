@@ -1,35 +1,40 @@
 .introApp {
-    text-align: center;
-    .intro {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 56vh;
-        width: max;
-        background-color:  white;
-        h2 {
-            margin: 40px 0 0 0 ;
-            background-color: white;
-        }
-        p {
-            margin: 20px;
-        }
-
-    }
-    img {
-        display: block;
-        margin: 0 auto; 
-        max-width: 100%;
-        background: radial-gradient(circle, rgba(239, 175, 175, 0.608) 0%, rgba(241, 215, 215, 0.869) 24%, rgb(228, 93, 63) 88%, rgba(248, 140, 113, 0.922) 100%);;
-    }
-    .link {
-        
-        font-weight: bold;
-        line-height: 1rem;
-        text-decoration: none;
-        color: white;
-        background-color: red;
-        padding: 16px 40px;
-        border-radius: 10px;
-    }
+	text-align: center;
+	.intro {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 56vh;
+		width: max;
+		background-color: white;
+		h2 {
+			margin: 40px 0 0 0;
+			background-color: white;
+		}
+		p {
+			margin: 20px;
+		}
+	}
+	img {
+		display: block;
+		margin: 0 auto;
+		max-width: 100%;
+		background: radial-gradient(
+			circle,
+			rgba(239, 175, 175, 0.608) 0%,
+			rgba(241, 215, 215, 0.869) 24%,
+			rgb(228, 93, 63) 88%,
+			rgba(248, 140, 113, 0.922) 100%
+		);
+	}
+	.link {
+		font-weight: bold;
+		line-height: 1rem;
+		text-decoration: none;
+		color: white;
+		background-color: var(--primary);
+		padding: 16px 40px;
+		border-radius: 10px;
+		font-family: "Poppins-Bold";
+	}
 }

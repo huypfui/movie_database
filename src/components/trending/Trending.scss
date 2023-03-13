@@ -4,14 +4,11 @@
 		scroll-snap-align: center;
 		position: relative;
 		margin: 0 1rem 0.5rem;
-
 		article {
 			width: 80vw;
 			height: 45svh;
 			overflow: hidden;
-			font-family: "Poppins-Regular";
 			img.poster {
-				// padding: 1rem 3rem;
 				width: 100%;
 				height: 100%;
 				border-radius: 10px;
@@ -39,10 +36,10 @@
 				p {
 					align-self: center;
 				}
-				span {
+				.rating {
 					margin: 1.5rem;
 					display: flex;
-					align-items: center;
+					align-self: flex-end;
 					gap: 0.5rem;
 				}
 			}

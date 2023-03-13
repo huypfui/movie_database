@@ -3,9 +3,9 @@ import "./Filter.scss";
 
 // Image import
 import search from "../../img/magnifying_glass.svg";
-// Component import
+// library import
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 export let genreData;
@@ -13,6 +13,7 @@ export let genreData;
 const Filter = ({ genreID }) => {
 	const [genres, setGenres] = useState();
 	const [searchTerm, setSearchTerm] = useState("");
+	const searchLinkRef = useRef(null);
 
 	useEffect(() => {
 		fetch(
@@ -27,6 +28,14 @@ const Filter = ({ genreID }) => {
 
 	const getSearchterm = (event) => setSearchTerm(event.target.value);
 
+	// function to search on enter
+	const handleEnterKey = (event) => {
+		if (event.key === "Enter") {
+			event.preventDefault();
+			searchLinkRef.current.click();
+		}
+	};
+
 	return (
 		<section className="filter">
 			<article className="searchbar">
@@ -35,8 +44,10 @@ const Filter = ({ genreID }) => {
 					name="search"
 					id="search"
 					onChange={getSearchterm}
+					onKeyDown={handleEnterKey}
+					enterKeyHint="search"
 				/>
-				<Link to={`/search/${searchTerm}`}>
+				<Link to={`/search/${searchTerm}`} ref={searchLinkRef}>
 					<img src={search} alt="search icon" />
 				</Link>
 			</article>

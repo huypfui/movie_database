@@ -13,6 +13,13 @@
 			padding: 1rem;
 			width: 100%;
 			font-family: inherit;
+			font-size: 1.1rem;
+		}
+		input[type="search"]::-webkit-search-decoration,
+		input[type="search"]::-webkit-search-cancel-button,
+		input[type="search"]::-webkit-search-results-button,
+		input[type="search"]::-webkit-search-results-decoration {
+			display: none;
 		}
 		a {
 			position: absolute;
@@ -50,17 +57,17 @@
 }
 
 .genreButtons::-webkit-scrollbar {
-	width:0em;
-	height: .5em;
+	width: 0em;
+	height: 0.5em;
 }
-.genreButtons::-webkit-scrollbar-thumb{
+.genreButtons::-webkit-scrollbar-thumb {
 	background: #fc2121;
 	width: 50pxpx;
-	border-radius:50vw;
+	border-radius: 50vw;
 }
 
-.genreButtons::-webkit-scrollbar-track{
-	background:whitesmoke;
-	margin-block:.5em;
-	border-radius:100vw;
+.genreButtons::-webkit-scrollbar-track {
+	background: whitesmoke;
+	margin-block: 0.5em;
+	border-radius: 100vw;
 }

@@ -1,5 +1,5 @@
 .movieDetail {
-	height: 100vh;
+	height: 100svh;
 	background-repeat: no-repeat;
 	background-position: top;
 	position: relative;
@@ -35,7 +35,7 @@
 		#ffffff 100%
 	);
 	h2 {
-		font-weight: 800;
+		margin: 0 1rem;
 	}
 	article {
 		text-align: left;
@@ -45,7 +45,7 @@
 		}
 	}
 	button {
-		background-color: #fc2121;
+		background-color: var(--primary);
 		color: white;
 		display: flex;
 		gap: 0.5rem;
@@ -65,8 +65,8 @@
 		width: 20px;
 		margin-right: 10px;
 	}
-	.seeMore{
-		color:#fc2121;
+	.seeMore {
+		color: var(--primary);
 	}
 }
 
@@ -90,5 +90,7 @@
 		font-size: 1.1rem;
 	}
 	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
 	justify-content: space-between;
 }

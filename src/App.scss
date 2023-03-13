@@ -1,6 +1,8 @@
 @font-face {
 	font-family: "Montserrat";
-	src: local("Montserrat") url("./fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+	src: local("Montserrat")
+		url("./fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+		format("truetype");
 }
 
 * {
@@ -19,21 +21,33 @@ a {
 	--primary: #fc2121;
 }
 
-.Home .trendingTitle {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1rem;
-}
-
-.Home .trendingTitle a {
-	color: var(--primary);
-}
-
-.welcome {
-	padding: 1rem 0 0 1rem;
+.Home {
+	h2 {
+		padding: 1rem 0 0 1rem;
+		font-size: 2.2rem;
+	}
+	.trendingTitle {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.5rem 0.5rem 0;
+		a {
+			color: var(--primary);
+		}
+	}
 }
 
 .font-face-montserrat {
-    font-family: "Montserrat";
+	font-family: "Montserrat";
+}
+
+.Home {
+	height: 100dvh;
+}
+
+h2,
+h3,
+h5,
+span:not(.seeMore) {
+	font-family: "Poppins-Bold";
 }
