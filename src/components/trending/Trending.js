@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 // image import
 import star from "../../img/star.svg";
 
+// font import
+import "../../fonts/Montserrat/Montserrat-VariableFont_wght.ttf";
+
 const Trending = ({ poster_path, title, vote_average, id }) => {
 	return (
 		<Link to={`/moviedetails/${id}`}>

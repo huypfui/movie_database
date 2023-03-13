@@ -1,5 +1,5 @@
 import "./Splashscreen.scss"
-import "../../fonts/Montserrat/Montserrat-Bold.ttf"
+import "../../fonts/Montserrat/Montserrat-VariableFont_wght.ttf"
 
 
 function SplashScreen(props) {

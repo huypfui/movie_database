@@ -24,7 +24,6 @@ const IntroApp = () => {
 
         { show ? <SplashScreen handleClick={handleClick}/>  : "" }
 
-
     </div> );
 }
 
