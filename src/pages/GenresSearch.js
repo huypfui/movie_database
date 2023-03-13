@@ -21,7 +21,7 @@ const GenreSearch = () => {
 	// Get Movie list according to genre
 	useEffect(() => {
 		fetch(
-			`https://api.themoviedb.org/3/discover/movie?api_key=2f42e4a86b0ac5a0f11b8f51ca045ce0&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${params.genre}&with_watch_monetization_types=flatrate`
+			`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${params.genre}&with_watch_monetization_types=flatrate`
 		)
 			.then((response) => response.json())
 			.then((data) => setGenreResult(data.results));
@@ -49,15 +49,14 @@ const GenreSearch = () => {
 				{params.search && searchResults
 					? searchResults?.map((movie) => (
 							<MovieItem {...movie} key={uuidv4()} />
-					
-							))
+					  ))
 					: genreResult?.map((movie) => (
 							<MovieItem {...movie} key={uuidv4()} />
-					))}
+					  ))}
 			</article>
 
 			<div className="nav">
-					<Navigation />
+				<Navigation />
 			</div>
 		</>
 	);

@@ -1,16 +1,13 @@
-.trendSection{
+.trendSection {
 	padding: 0 1rem 0 1rem;
-
 	.trending {
-
 		scroll-snap-align: center;
 		position: relative;
 		// margin: 0 auto;
-		padding: 1rem;
+		margin: 0 1rem 0.5rem;
 		article {
-	
 			width: 80vw;
-			height: 40svh;
+			height: 45svh;
 			overflow: hidden;
 			font-family: "Poppins-Regular";
 			img.poster {
@@ -111,21 +108,20 @@
 	overflow-x: scroll;
 	overscroll-behavior-inline: contain;
 	gap: 2rem;
-	
 }
 
 .carusell::-webkit-scrollbar {
-	width:0em;
-	height: .5em;
+	width: 0em;
+	height: 0.5em;
 }
-.carusell::-webkit-scrollbar-thumb{
+.carusell::-webkit-scrollbar-thumb {
 	background: #fc2121;
-	border-radius:100vw;
+	border-radius: 100vw;
 	width: 50px;
 }
 
-.carusell::-webkit-scrollbar-track{
-	background:whitesmoke;
-	margin-block:.5em;
-	border-radius:100vw;
+.carusell::-webkit-scrollbar-track {
+	background: whitesmoke;
+	margin-block: 0.5em;
+	border-radius: 100vw;
 }
