@@ -1,5 +1,5 @@
 // library import
-import { useParams, useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { v4 as uuidv4 } from "uuid";
 
@@ -17,21 +17,21 @@ const GenreSearch = () => {
 	// get params for genre and searchTerm
 	const params = useParams();
 	const apiKey = "2f42e4a86b0ac5a0f11b8f51ca045ce0";
-
 	// fetch movies according to genre
 	useEffect(() => {
 		fetchMovies();
+		// eslint-disable-next-line
 	}, [page, params.genre]);
-
 	// fetch movies according to searchTerm
 	useEffect(() => {
 		fetchResults();
+		// eslint-disable-next-line
 	}, [page, params.search]);
-
 	// reset page count when genre changes and go back to top
 	useEffect(() => {
 		setPage(1);
 		movielistRef.current.scrollTop = 0;
+		// eslint-disable-next-line
 	}, [params.genre]);
 
 	// reset page count when searchTerm changes and go back to top
@@ -94,6 +94,7 @@ const GenreSearch = () => {
 		return () => {
 			movielist.removeEventListener("scroll", handleScroll);
 		};
+		// eslint-disable-next-line
 	}, [page]);
 
 	return (
