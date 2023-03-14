@@ -10,10 +10,7 @@ import star from "../../img/star.svg";
 import { useEffect, useState } from "react";
 
 const MovieInfo = ({ movieDetails }) => {
-	// console.log(movieDetails);
-
 	let genre = movieDetails.genres.map((genre) => genre.name).join(", ");
-	// console.log(genre);
 
 	const [key, setKey] = useState();
 
@@ -31,6 +28,8 @@ const MovieInfo = ({ movieDetails }) => {
 		let min = total % 60;
 		return `${hours}h${min > 0 ? ` ${min}m` : ""}`;
 	};
+
+	const [details, showDetails] = useState(false);
 
 	return (
 		<>
@@ -50,8 +49,23 @@ const MovieInfo = ({ movieDetails }) => {
 				<article>
 					<h3>Overview</h3>
 					<p>
-						{movieDetails.overview.slice(0, 200)}{" "}
-						<span className="seeMore"> See more...</span>
+						{!details
+							? movieDetails.overview.slice(0, 130) + ". . ."
+							: movieDetails.overview}
+
+						{!details ? (
+							<span className="seeMore" onClick={() => showDetails(!details)}>
+								{" "}
+								See more
+							</span>
+						) : (
+							<span className="seeMore" onClick={() => showDetails(!details)}>
+								{" "}
+								Show less
+							</span>
+						)}
+						{/* {movieDetails.overview.slice(0, 200)}{" "}
+						<span className="seeMore" onClick={handleClick}> See more...</span> */}
 					</p>
 
 					<div className="genre">
