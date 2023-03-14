@@ -105,10 +105,10 @@ const GenreSearch = () => {
 				{params.search && searchResults
 					? searchResults?.map((movie) => (
 							<MovieItem {...movie} key={uuidv4()} />
-					  ))
+					))
 					: genreResult?.map((movie) => (
 							<MovieItem {...movie} key={uuidv4()} />
-					  ))}
+					))}
 			</article>
 
 			<div className="nav">
