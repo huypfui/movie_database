@@ -30,8 +30,8 @@
 	background-image: linear-gradient(
 		180deg,
 		#ffffff00 0%,
-		#ffffff74 25%,
-		#fff 60%,
+		#ffffff74 30%,
+		#fff 55%,
 		#ffffff 100%
 	);
 	h2 {
@@ -42,6 +42,12 @@
 		margin: 1rem;
 		h3 {
 			margin: 1rem 0;
+		}
+		p {
+			text-align: justify;
+			text-justify: inter-word;
+			// height: 100px;
+			// overflow-y: scroll;
 		}
 	}
 	button {
@@ -67,6 +73,7 @@
 	}
 	.seeMore {
 		color: var(--primary);
+		display: block;
 	}
 }
 
