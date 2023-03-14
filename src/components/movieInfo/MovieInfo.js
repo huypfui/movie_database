@@ -30,7 +30,6 @@ const MovieInfo = ({ movieDetails }) => {
 	};
 
 	const [details, showDetails] = useState(false);
-	d;
 
 	return (
 		<>
