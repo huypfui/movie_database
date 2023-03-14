@@ -23,10 +23,12 @@ const GenreSearch = () => {
 		// eslint-disable-next-line
 	}, [page, params.genre]);
 	// fetch movies according to searchTerm
+
 	useEffect(() => {
 		fetchResults();
 		// eslint-disable-next-line
 	}, [page, params.search]);
+
 	// reset page count when genre changes and go back to top
 	useEffect(() => {
 		setPage(1);

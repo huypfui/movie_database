@@ -46,6 +46,7 @@ const Filter = ({ genreID }) => {
 					onChange={getSearchterm}
 					onKeyDown={handleEnterKey}
 					enterKeyHint="search"
+					value={searchTerm}
 				/>
 				<Link to={`/search/${searchTerm}`} ref={searchLinkRef}>
 					<img src={search} alt="search icon" />
@@ -60,6 +61,9 @@ const Filter = ({ genreID }) => {
 						}
 						to={`/genre/${genre.id}`}
 						value={genre.id}
+						onClick={() => {
+							searchTerm !== "" && setSearchTerm("");
+						}}
 						key={uuidv4()}>
 						{genre.name}
 					</Link>
