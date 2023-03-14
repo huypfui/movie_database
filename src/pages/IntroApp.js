@@ -23,7 +23,7 @@ const IntroApp = () => {
 					Watch Everywhere
 				</h2>
 				<p>
-					Stream unlimited movies and TV shows
+					Stream unlimited movies
 					<br />
 					on your phone, tablet, laptop and TV.
 				</p>
