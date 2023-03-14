@@ -4,6 +4,7 @@
 		position: absolute;
 		left: 0;
 		right: 0;
+		bottom: 0;
 		top: 56vh;
 		width: max;
 		background-color: white;
@@ -16,8 +17,10 @@
 		}
 	}
 	img {
-		display: block;
+		// display: block;
 		margin: 0 auto;
+		padding: 1rem;
+
 		max-width: 100%;
 		background: radial-gradient(
 			circle,
