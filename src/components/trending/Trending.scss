@@ -47,7 +47,6 @@
 	}
 }
 
-
 .carusell {
 	display: flex;
 	padding: 1.5rem 3rem;
@@ -71,4 +70,14 @@
 	background: whitesmoke;
 	margin-block: 0.5em;
 	border-radius: 100vw;
+}
+
+@media only screen and (min-width: 700px) {
+	.trendSection {
+		.trending {
+			article {
+				width: 20vw;
+			}
+		}
+	}
 }
